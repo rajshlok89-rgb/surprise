@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>It's motkii's day</title>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+body, html {
+  margin:0;
+  padding:0;
+  font-family:'Luckiest Guy', cursive;
+  overflow-x:hidden;
+  background: linear-gradient(-45deg, #ffe6f0, #fff0b3, #cce7ff, #ffccf9);
+  background-size:400% 400%;
+  animation: gradientBG 20s ease infinite;
+}
+
+@keyframes gradientBG {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.section{
+  display:none;
+  padding:50px;
+  min-height:100vh;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+
+.active{ display:block; }
+
+h1,h2{
+  font-size:3em;
+  color:black;
+  text-shadow:2px 2px 6px rgba(255,255,255,0.6);
+}
+
+p{
+  font-size:1.5rem;
+  color:red;
+  line-height:1.6;
+}
+
+#section0 p,
+#section7 p{
+  color:red !important;
+}
+
+.btn{
+  background:#ff66b3;
+  color:#fff;
+  border:none;
+  padding:15px 30px;
+  font-size:1.2rem;
+  cursor:pointer;
+  margin-top:30px;
+  border-radius:10px;
+  transition:0.3s;
+}
+.btn:hover{ box-shadow:0 0 15px #ff1493; }
+
+.glow-title{
+  font-size:4em;
+  color:#fff;
+  animation:glowPulse 2s infinite alternate;
+  text-shadow:
+    0 0 10px #ff66b3,
+    0 0 20px #ff66b3,
+    0 0 40px #ff1493,
+    0 0 80px #ff1493;
+}
+
+@keyframes glowPulse{
+  from{ transform:scale(1); }
+  to{ transform:scale(1.08); }
+}
+
+/* Balloons */
+.balloon-container{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:1;
+}
+
+.balloon{
+  position:absolute;
+  bottom:-150px;
+  width:30px;
+  height:40px;
+  border-radius:50%;
+  animation:floatUp linear infinite;
+}
+
+.balloon::after{
+  content:"";
+  position:absolute;
+  width:2px;
+  height:30px;
+  background:#555;
+  left:50%;
+  top:40px;
+}
+
+@keyframes floatUp{
+  0%{ transform:translateY(0); opacity:1; }
+  100%{ transform:translateY(-120vh); opacity:0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="balloon-container" id="balloons"></div>
+
+<!-- AUDIO -->
+<audio id="hamster">
+  <source src="hamster.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="bhai">
+  <source src="bhai.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="aww">
+  <source src="aww.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ORIGINAL CONTENT RESTORED -->
+
+<div id="section0" class="section active">
+  <h1 class="glow-title">🔊 VOLUME UP 🔊</h1>
+  <p>
+    <span>🎵 🎶 🎵</span>
+  </p>
+  <p style="font-size:1.8rem;">
+    Turn your volume to maximum.<br>
+    This celebration needs FULL energy😁
+  </p>
+  <button class="btn" onclick="nextSection(1)">START THE CHAOS</button>
+</div>
+
+<div id="section1" class="section">
+  <h1>🚨 EMERGENCY RECORD 🚨</h1>
+  <p>On this day… 19 years ago… An earthquake happened.<br>
+  Not a small one. The planet felt it.<br>
+  The reason? You already knows😁</p>
+  <button class="btn" onclick="nextSection(2)">😑😑</button>
+</div>
+
+<div id="section2" class="section">
+  <h2>🌍 Damage Report</h2>
+  <p>Hospital windows shook.<br>
+  Nurses panicked.<br>
+  One doctor said,<br>
+  “This one is going to be trouble.”<br>
+  19 years later… Statement still valid😈</p>
+  <button class="btn" onclick="nextSection(3)">Aachaa</button>
+</div>
+
+<div id="section3" class="section">
+  <h2>☕ Coffee Situation</h2>
+  <p>Later studies confirmed something serious.<br>
+  The earthquake wasn’t the biggest threat.<br>
+  It's you without coffee. <br>
+  <strong>NO CAFFEINE = HIGH RISK☠️</strong><br></p>
+  <button class="btn" onclick="nextSection(4)">Ooo</button>
+</div>
+
+<div id="section4" class="section">
+  <h2>🍰 Diet Reality</h2>
+  <p>Every month you announce:<br>
+  “This time I’m serious about my diet.”<br>
+  You plan. You motivate yourself.<br>
+  And then… Day 3 happens.<br>
+  A little moti still walking like a queen holding 5L mug of coffee😋.</p>
+  <button class="btn" onclick="nextSection(5)">Bohut Marungi</button>
+</div>
+
+<div id="section5" class="section">
+  <h2>🎂 Official Personality File</h2>
+  <p>📁 CONFIDENTIAL FILE OPENED<br>
+  Subject: Birthday Girl<br>
+  Age: 19<br><br>
+Built-in traits since birth: <br>
+  • Ego + attitude: Maximum<br>
+  • Ignoring me: Expert level 😭<br>
+  • Volume control: Missing<br>
+  • Coffee dependency: Critical<br>
+  • Breakfast : What's this??🤔<br><br>
+  Version 19.0 successfully launched.<br>
+  Factory settings remain unchanged.</p>
+  <button class="btn" onclick="nextSection(6)">Hmm</button>
+</div>
+
+<div id="section6" class="section">
+  <h2>✨ Savage Ending</h2>
+  <p>19 years,
+  The earth survived the earthquake.<br>
+  The hospital survived the chaos.<br>
+  The world survived you.<br>
+  Impressive.<br>
+  Another year unlocked.<br>
+  Wishing you a year as bold as your personality.</p>
+  <button class="btn" onclick="nextSection(7)">Aachaa</button>
+</div>
+
+<div id="section7" class="section">
+  <h1>🎉 HAPPY BIRTHDAY Motki!! 🥳</h1>
+  <p style="font-size:2rem;">
+ Keep slaying in edits like a boss. <br> 
+Be always happy, don’t listen to anyone… not even me 😎🔥 <br>
+Eat cake, make chaos, and enjoy your dayy!!🥳”<br>
+
+  Let the celebrations begins!🎂🎈☕ <br></p>
+  <button class="btn" onclick="nextSection(0)">Replay</button>
+</div>
+
+<script>
+const hamster = document.getElementById("hamster");
+const bhai = document.getElementById("bhai");
+const aww = document.getElementById("aww");
+
+bhai.volume = 1.0;
+aww.volume = 0.4;
+hamster.volume = 1.0;
+
+bhai.loop = true;
+
+let awwStarted = false;
+
+function nextSection(num){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('section'+num).classList.add('active');
+
+  if(num === 7){
+    bhai.pause();
+    aww.pause();
+    hamster.currentTime = 0;
+    hamster.play().catch(()=>{});
+  } else {
+    hamster.pause();
+    hamster.currentTime = 0;
+
+    if(!awwStarted){
+      aww.play().catch(()=>{});
+      awwStarted = true;
+    }
+
+    if(bhai.paused){
+      bhai.play().catch(()=>{});
+    }
+  }
+}
+
+/* Balloons */
+const balloonContainer=document.getElementById("balloons");
+function createBalloon(){
+  const balloon=document.createElement("div");
+  balloon.classList.add("balloon");
+  balloon.style.left=Math.random()*100+"vw";
+  balloon.style.background=`hsl(${Math.random()*360},70%,60%)`;
+  balloon.style.animationDuration=(5+Math.random()*5)+"s";
+  balloonContainer.appendChild(balloon);
+  setTimeout(()=>{ balloon.remove(); },10000);
+}
+setInterval(createBalloon,800);
+</script>
+
+</body>
+</html>
